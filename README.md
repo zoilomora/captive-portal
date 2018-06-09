@@ -53,7 +53,7 @@ All the commands listed below will be executed as **root**.
 
 4. Install Chillispot:
     ```bash
-    wget http://www.chillispot.info/download/chillispot-1.1.0.i386.rpm
+    wget https://raw.githubusercontent.com/zoilomora/captive-portal/master/chillispot-1.1.0.i386.rpm
     rpm -Uvh chillispot-1.1.0.i386.rpm
     ```
 
