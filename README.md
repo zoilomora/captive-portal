@@ -135,18 +135,18 @@ All the commands listed below will be executed as **root**.
 13. Register user in FreeRADIUS by editing the file ``/etc/raddb/users``:
     ```
     # Insert a line for each user at the end of the file
-    "John Doe" Cleartext-Password := "hello"
+    john Cleartext-Password := "hello"
     ```
 
 14. Check access to FreeRADIUS from console:
     ```bash
-    radtest "John Doe" "hello" 127.0.0.1 0 testing123
+    radtest "john" "hello" 127.0.0.1 0 testing123
     ```
 
     - Correct result of the command
         ```
         Sent Access-Request Id 215 from 0.0.0.0:51134 to 127.0.0.1:1812 length 75
-        	User-Name = "John Doe"
+        	User-Name = "john"
         	User-Password = "hello"
         	NAS-IP-Address = 127.0.0.1
         	NAS-Port = 0
@@ -161,6 +161,11 @@ All the commands listed below will be executed as **root**.
     systemctl enable httpd
     systemctl enable radiusd
     systemctl enable chilli
+    ```
+
+16. Restart the server to apply and activate the services
+    ```bash
+    reboot
     ```
 
 ## Notes
